@@ -1,3 +1,3 @@
 def sum_terms(n)
-  # code here
+  # TODO: code here
 end
