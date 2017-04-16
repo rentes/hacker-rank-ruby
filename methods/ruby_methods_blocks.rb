@@ -1,8 +1,8 @@
 def factorial
-  #_______________________
+  yield
 end
 
 n = gets.to_i
 factorial do
-  puts #_______________________
+  puts (1..n).inject(:*)
 end
