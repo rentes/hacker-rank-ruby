@@ -1,7 +1,7 @@
 def block_message_printer
   message = "Welcome to Block Message Printer"
   if block_given?
-    #_________
+    yield
   end
   puts "But in this function/method message is :: #{message}"
 end
@@ -13,7 +13,7 @@ block_message_printer { puts "This message remembers message :: #{message}" }
 
 def proc_message_printer(my_proc)
   message = "Welcome to Proc Message Printer"
-  #_________________________              #Call my_proc
+  my_proc.call()
   puts "But in this function/method message is :: #{message}"
 end
 
@@ -25,7 +25,7 @@ proc_message_printer(my_proc)
 
 def lambda_message_printer(my_lambda)
   message = "Welcome to Lambda Message Printer"
-  #_________________________              #Call my_lambda
+  my_lambda.()
   puts "But in this function/method message is :: #{message}"
 end
 
